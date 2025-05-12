@@ -1,0 +1,20 @@
+dir:
+  input_dir: data/raw
+  output_dir: data/processed
+  radiomics_dir: data/radiomics_input
+
+preprocessing:
+  spacing:
+    target: [5.0, 1.0, 1.0]
+  shape:
+    output: [140, 250, 250]
+  windows:
+    - [0, 150]
+
+clahe:
+  enable: false
+  clip_limit: 2.0
+  tile_grid_size: [8, 8]
+
+normalize: zscore
+save_format: pt # or pt or both
